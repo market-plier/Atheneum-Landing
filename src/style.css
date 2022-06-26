@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+
+html * {
+    font-family: 'Raleway', sans-serif;
+}
+
+.bitcoin{
+background: rgba(247, 147, 26, 0.2);
+mix-blend-mode: normal;
+box-shadow: 0px 2.9522px 19.9273px rgba(247, 147, 26, 0.29);
+backdrop-filter: blur(7.38049px);
+}
+
+.devider{
+    /* Vector 1776 */
+height: 0px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
