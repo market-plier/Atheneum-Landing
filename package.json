@@ -15,11 +15,13 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.2"
+  },
   "scripts": {
     "start": "webpack serve --mode=development --open",
     "build": "export NODE_ENV=production && webpack"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/market-plier/Atheneum-Landing.git"
