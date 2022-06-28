@@ -1,0 +1,21 @@
+.bs:not(.redef) {
+    @import "~bootstrap/scss/bootstrap";  
+}
+
+.bs:not(.redef) {
+  .carousel-indicators {
+    [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      background: #5bceff;
+      opacity: 0.3;
+      border: none;
+      margin: 0;
+      margin-left: 15px;
+      border-radius: 100%;
+      &.active{
+        opacity: 1;
+      }
+    }
+  }
+}
