@@ -2,22 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap");
 
 html * {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-.bitcoin{
-background: rgba(247, 147, 26, 0.2);
-mix-blend-mode: normal;
-box-shadow: 0px 2.9522px 19.9273px rgba(247, 147, 26, 0.29);
-backdrop-filter: blur(7.38049px);
+body {
+  overflow: overlay;
 }
 
-.devider{
-    /* Vector 1776 */
-height: 0px;
-border: 1px solid rgba(255, 255, 255, 0.2);
+.bitcoin {
+  background: rgba(247, 147, 26, 0.2);
+  mix-blend-mode: normal;
+  box-shadow: 0px 2.9522px 19.9273px rgba(247, 147, 26, 0.29);
+  backdrop-filter: blur(7.38049px);
+}
 
+.devider {
+  /* Vector 1776 */
+  height: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.green-gradient-box {
+  box-shadow: 0px 0px 139px 10px rgba(128, 232, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+.green-gradient-text {
+  background: radial-gradient(50% 50% at 50% 50%, #00c24e 0%, #22d096 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d9dfe91;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3d9dfec2;
 }

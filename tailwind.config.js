@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
         'gradient': 'linear-gradient(258.9deg, #18C8FF -6.52%, #933FFE 91.35%)',
         'background': 'radial-gradient(62.81% 133.94% at 17.27% 14.86%, #04127B 0%, #00001C 100%)',
+        'green': 'radial-gradient(50% 50% at 50% 50%, rgba(0, 194, 78, 0.15) 0%, rgba(34, 208, 150, 0.15) 100%)'
       },
       colors: {
         'white': '#FFFFFF',

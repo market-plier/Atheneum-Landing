@@ -1,88 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Webpack Test</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Webpack Test</title>
-</head>
+  <body class="bg-background">
+    <header class="flex justify-between p-5">
+      <img src="assets/images/mobile/mobile-logo.svg" />
+      <img src="assets/images/mobile/mobile-burger.svg" />
+      <nav class="hidden"></nav>
+    </header>
 
-<body class="bg-background">
-  <header class="flex justify-between p-5">
-    <img src="assets/images/mobile/mobile-logo.svg">
-    <img src="assets/images/mobile/mobile-burger.svg">
-    <nav class="hidden">
-
-    </nav>
-  </header>
-
-  <main class="container mx-auto mt-11">
-    <p class="font-bold text-[32px] leading-10 text-white text-center">
-      Monetize your videos with <span class="font-extrabold text-[#5683ff]">NFTs</span> in a couple of clicks
-    </p>
-    <p class="font-normal text-sm text-trans-white text-center mt-2 leading-5">
-      Atheneum is a platform that lets a YouTuber have a stable income with NFTs without having to dive into the
-      complicated Web 3.0 world
-    </p>
-    <button class="bg-gradient text-lg text-white font-bold mt-12 rounded-[10px] p-[15px] container">I want it!</button>
-    <a class="justify-center mt-7 flex text-white">
-      <img src="assets/images/mobile/mobile-compas.svg">
-      <p class="ml-[7px] font-bold">Discover more</p>
-    </a>
-    <div class="flex justify-between mt-14">
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
+    <main class="container mx-auto mt-11">
+      <p class="font-bold text-[32px] leading-10 text-white text-center">
+        Monetize your videos with
+        <span class="font-extrabold text-[#5683ff]">NFTs</span> in a couple of
+        clicks
+      </p>
+      <p
+        class="font-normal text-sm text-trans-white text-center mt-2 leading-5"
+      >
+        Atheneum is a platform that lets a YouTuber have a stable income with
+        NFTs without having to dive into the complicated Web 3.0 world
+      </p>
+      <button
+        class="bg-gradient text-lg text-white font-bold mt-12 rounded-[10px] p-[15px] container"
+      >
+        I want it!
+      </button>
+      <a class="justify-center mt-7 flex text-white">
+        <img src="assets/images/mobile/mobile-compas.svg" />
+        <p class="ml-[7px] font-bold">Discover more</p>
+      </a>
+      <div class="flex justify-between mt-14">
+        <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
+          <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg" />
+        </div>
+        <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
+          <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg" />
+        </div>
+        <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
+          <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg" />
+        </div>
+        <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
+          <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg" />
+        </div>
+        <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
+          <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg" />
+        </div>
       </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
+    </main>
+    <section id="introduction" class="container mx-auto mt-24">
+      <img src="assets/images/mobile/mobile-introduction.svg" />
+      <p class="font-bold text-[24px] leading-10 text-white mt-12 text-center">
+        Introduction to <span class="font-bold text-blue">Atheneum</span>
+      </p>
+      <p
+        class="font-normal text-sm text-trans-white text-center mt-5 leading-5"
+      >
+        Atheneum is a marketplace-based platform that lets YouTubers easily sell
+        custom or automatically-generated NFTs related to their videos. At the
+        same time, the fans can simply purchase the NFTs to support the creator
+        or to access additional content.
+      </p>
+      <div class="devider my-5"></div>
+      <p
+        class="font-normal text-sm text-trans-white text-center mt-2 leading-5"
+      >
+        Follow us on social media:
+      </p>
+      <div class="flex justify-around mt-2">
+        <img src="assets/images/facebook.svg" />
+        <img src="assets/images/twitter.svg" />
+        <img src="assets/images/instagram.svg" />
+        <img src="assets/images/youtube.svg" />
+        <img src="assets/images/linkedin.svg" />
+        <img src="assets/images/telegram.svg" />
       </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
+    </section>
+    <section id="monetizing" class="container mx-auto mt-24">
+      <img src="assets/images/monetizing.svg" />
+      <p class="font-bold text-[24px] leading-10 text-white mt-12 text-center">
+        Monetizing videos with NFTs
+      </p>
+      <p
+        class="font-normal text-sm text-trans-white text-center mt-5 leading-5"
+      >
+        YouTubers often struggle to make income with their content, especially
+        if they get demonetized. Atheneum lets the creators have a consistent
+        revenue based on NFT technology. The platform creates, puts to the
+        marketplace, and sells the NFTs all by itself so a YouTuber does minimum
+        additional efforts.
+      </p>
+      <button
+        class="bg-gradient text-lg text-white font-bold mt-5 rounded-[10px] p-[15px] container"
+      >
+        Learn more
+      </button>
+    </section>
+    <section id="video" class="container mx-auto mt-24">
+      <p class="font-bold text-[24px] leading-10 text-white mt-12 text-center">
+        How does Atheneum work?
+      </p>
+      <iframe
+        class="w-full mt-10 aspect-video"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+      >
+      </iframe>
+    </section>
+    <section id="benefits" class="container mx-auto mt-24">
+      <img src="assets/images/benefits.svg" />
+      <p class="font-bold text-[24px] leading-10 text-white mt-12 text-center">
+        <span class="font-bold text-blue">Benefits</span> for NFT holders
+      </p>
+      <p
+        class="font-normal text-sm text-trans-white text-center mt-5 leading-5"
+      >
+        When you buy the NFTs, you not only support your favorite content
+        creators but also gain access to some extras or you can be mentioned as
+        a "Top fan" for this channel. The content that you access after buying
+        the NFTs can be additional videos, books, links for some topics, and so
+        on…
+      </p>
+      <div
+        class="flex mt-5 items-start py-[10px] px-[15px] bg-green green-gradient-box rounded-[10px]"
+      >
+        <img src="assets/images/tick.svg" />
+        <p class="green-gradient-text font-bold text-sm ml-2">
+          Additional features: videos, books, links for some topics…
+        </p>
       </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
+    </section>
+    <section id="roadmap" class="mt-24">
+      <div class="container mx-auto">
+        <p
+          class="font-bold text-[24px] leading-10 text-white mt-12 text-center"
+        >
+          Roadmap
+        </p>
       </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
+      <div class="w-[100%] pb-4 mt-10 overflow-x-scroll">
+        <img src="assets/images/roadmap.svg" class="max-w-none" />
       </div>
+      <p class="font-normal text-sm text-blue mt-2 text-center">Drag to move</p>
+    </section>
 
-    </div>
-  </main>
-  <section id="introduction" class="container mx-auto mt-24">
-    <img src="assets/images/mobile/mobile-introduction.svg">
-    <p class="font-bold text-[24px] leading-10 text-white mt-12 text-center">
-      Introduction to <span class="font-bold text-blue">Atheneum</span>
-    </p>
-    <p class="font-normal text-sm text-trans-white text-center mt-5 leading-5">
-      Atheneum is a marketplace-based platform that lets YouTubers easily sell custom or automatically-generated NFTs
-      related to their videos. At the same time, the fans can simply purchase the NFTs to support the creator or to
-      access additional content.
-    </p>
-    <div class="devider my-5"></div>
-    <p class="font-normal text-sm text-trans-white text-center mt-2 leading-5">
-      Follow us on social media:
-    </p>
-    <div class="flex justify-around mt-2">
-      <img src="assets/images/facebook.svg">
-      <img src="assets/images/twitter.svg">
-      <img src="assets/images/instagram.svg">
-      <img src="assets/images/youtube.svg">
-      <img src="assets/images/linkedin.svg">
-      <img src="assets/images/telegram.svg">
+    <section id="team" class="container mx-auto mt-24">
 
-    </div>
-  </section>
-  <section>
-
-  </section>
-  <section>
-
-  </section>
-  <footer>
-
-  </footer>
-  <h1 class="">Hello world new</h1>
-  <script src="bundle.js"></script>
-</body>
-
+    </section>
+    <section id="mentor" class="container mx-auto mt-24">
+        
+    </section>
+    <section id="sponsor" class="container mx-auto mt-24">
+        
+    </section>
+    <section id="form" class="container mx-auto mt-24">
+        
+    </section>
+    <footer></footer>
+    <script src="bundle.js"></script>
+  </body>
 </html>
