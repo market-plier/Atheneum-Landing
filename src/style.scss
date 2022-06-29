@@ -1,7 +1,29 @@
 .bs:not(.redef) {
-    @import "~bootstrap/scss/bootstrap";  
+  @import "~bootstrap/scss/bootstrap";
 }
 
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+      62.81% 133.94% at 17.27% 14.86%,
+      rgba(4, 18, 123, 0.4) 0%,
+      rgba(0, 0, 28, 0.4) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  backdrop-filter: blur(60px);
+  &.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+  }
+  &.show {
+    opacity: 0.5;
+  }
+}
 .bs:not(.redef) {
   .carousel-indicators {
     [data-bs-target] {
@@ -13,7 +35,7 @@
       margin: 0;
       margin-left: 15px;
       border-radius: 100%;
-      &.active{
+      &.active {
         opacity: 1;
       }
     }

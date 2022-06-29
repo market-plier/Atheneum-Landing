@@ -9,8 +9,44 @@
   <body class="bg-background">
     <header class="flex justify-between p-5">
       <img src="assets/images/mobile/mobile-logo.svg" />
-      <img src="assets/images/mobile/mobile-burger.svg" />
-      <nav class="hidden"></nav>
+      <button onclick="document.querySelectorAll('.burger-menu').forEach(el => el.classList.remove('opacity-0','invisible')); document.querySelectorAll('.burger-menu').forEach(el => el.classList.add('opacity-100')); document.querySelector('body').style.overflow = 'hidden'">
+        <img src="assets/images/mobile/mobile-burger.svg"/>
+      </button>
+      <nav class="opacity-0 invisible p-5 burger-menu flex flex-col justify-between fixed top-0 bottom-0 left-0 right-0 bg-background z-10">
+        <div class="flex justify-between">
+      <img src="assets/images/mobile/mobile-logo.svg" />
+
+          <button onclick="document.querySelector('.burger-menu').classList.add('opacity-0','invisible'); document.querySelector('body').attributeStyleMap.clear()">
+            <img src="assets/images/close-btn.svg" class="">
+          </button>
+        </div>
+        <div>
+          <a class="font-normal text-lg text-trans-white text-center mt-7 block">
+            About Us
+          </a>
+          <a class="font-normal text-lg text-trans-white text-center mt-7 block">
+            Our Team
+          </a>
+          <a class="font-normal text-lg text-trans-white text-center mt-7 block">
+            Roadmap
+          </a>
+          <a class="font-normal text-lg text-trans-white text-center mt-7 block">
+            Benefits
+          </a>
+        </div>
+        <div class="container mx-auto">
+          <p class="font-normal text-sm text-trans-white text-center">
+            Змінити мову тут
+          </p>
+          <button class="mx-auto mt-2 block" >
+            <img src="assets/images/ukraine-language.svg" alt="">
+          </button>
+          <div class="devider my-7"></div>
+          <button class="mx-auto block" >
+            <img src="assets/images/contact-us-btn.svg" alt="">
+          </button>
+        </div>
+      </nav>
     </header>
 
     <main class="container mx-auto mt-11">
@@ -46,7 +82,7 @@
         </div>
         <div class="flex justify-center nano w-12 h-12 rounded-full">
           <img class="w-[30px]" src="assets/images/nano.svg" />
-          </div>
+        </div>
       </div>
     </main>
     <section id="introduction" class="container mx-auto mt-24">
@@ -192,11 +228,15 @@
               />
               <div class="carousel-caption redef">
                 <h5
-                  id="name"
+                  class="font-bold text-[18px] leading-6 text-white text-center"
                 >
                   Artem Buchihin
                 </h5>
-                <p id="position">CEO</p>
+                <p
+                  class="font-normal mt-1 text-sm text-trans-white text-center"
+                >
+                  CTO
+                </p>
               </div>
             </div>
             <div class="carousel-item">
@@ -206,12 +246,16 @@
                 alt="..."
               />
               <div class="carousel-caption redef">
-                <h5name
+                <h5
                   class="font-bold text-[18px] leading-6 text-white text-center"
                 >
                   Danylo Liakhovetskyi
                 </h5>
-                <p id="position">CEO</p>
+                <p
+                  class="font-normal mt-1 text-sm text-trans-white text-center"
+                >
+                  CEO
+                </p>
               </div>
             </div>
             <div class="carousel-item">
@@ -222,11 +266,15 @@
               />
               <div class="carousel-caption redef">
                 <h5
-                  id="name"
+                  class="font-bold text-[18px] leading-6 text-white text-center"
                 >
                   Ilya Zubkov
                 </h5>
-                <p id="position">COO</p>
+                <p
+                  class="font-normal mt-1 text-sm text-trans-white text-center"
+                >
+                  COO
+                </p>
               </div>
             </div>
             <div class="carousel-item">
@@ -237,11 +285,13 @@
               />
               <div class="carousel-caption redef">
                 <h5
-                  id="name"
+                  class="font-bold text-[18px] leading-6 text-white text-center"
                 >
                   Erik Poda
                 </h5>
-                <p id="position">
+                <p
+                  class="font-normal mt-1 text-sm text-trans-white text-center"
+                >
                   Software engineer
                 </p>
               </div>
@@ -296,21 +346,35 @@
       </div>
     </section>
     <section id="form" class="container contact-form p-5 mx-auto mt-24">
-    <img src="assets/images/form-pic.svg" class="mx-auto" alt="">
-    <p class="font-bold text-[24px] leading-10 text-white mt-5">
-      Keep in touch
-    </p>
-    <input type="text" placeholder="Name" class="custom-input p-5 w-full mt-3">
-    <input type="text" placeholder="Email" class="custom-input p-5 w-full mt-3">
-    <input type="text" placeholder="Comment" class="custom-input p-5 pb-24 w-full mt-3">
-    <button
-    class="bg-gradient text-lg text-white font-bold mt-7 rounded-[10px] p-[15px] container"
-  >
-    Send my comment
-  </button>
+      <img src="assets/images/form-pic.svg" class="mx-auto" alt="" />
+      <p class="font-bold text-[24px] leading-10 text-white mt-5">
+        Keep in touch
+      </p>
+      <input
+        type="text"
+        placeholder="Name"
+        class="custom-input p-5 w-full mt-3"
+      />
+      <input
+        type="text"
+        placeholder="Email"
+        class="custom-input p-5 w-full mt-3"
+      />
+      <input
+        type="text"
+        placeholder="Comment"
+        class="custom-input p-5 pb-24 w-full mt-3"
+      />
+      <button
+        class="bg-gradient text-lg text-white font-bold mt-7 rounded-[10px] p-[15px] container"
+        data-bs-toggle="modal"
+        data-bs-target="#thankYouPopUp"
+      >
+        Send my comment
+      </button>
     </section>
     <footer class="container mx-auto mt-24 pb-10">
-      <img src="assets/images/mobile/mobile-logo.svg" class="mx-auto"/>
+      <img src="assets/images/mobile/mobile-logo.svg" class="mx-auto" />
       <a class="font-normal text-sm text-trans-white text-center mt-7 block">
         About Us
       </a>
@@ -326,7 +390,10 @@
       <p class="font-normal text-sm text-trans-white text-center mt-10 block">
         Keep in touch with us!
       </p>
-      <a href="mailto" class="font-bold text-lg text-blue block mt-2 text-center">
+      <a
+        href="mailto"
+        class="font-bold text-lg text-blue block mt-2 text-center"
+      >
         atheneum.official@gmail.com
       </a>
       <div class="flex justify-around mt-7">
@@ -339,12 +406,43 @@
       </div>
       <div class="devider my-10"></div>
       <p class="font-normal text-sm text-trans-white text-center">
-        © Atheneum,2022. All rights reserved 
-      </p>   
-      <a href="mailto" class="font-normal text-sm text-trans-white text-center mt-2 underline block">
+        © Atheneum,2022. All rights reserved
+      </p>
+      <a
+        href="mailto"
+        class="font-normal text-sm text-trans-white text-center mt-2 underline block"
+      >
         Privacy Policy
       </a>
     </footer>
+    <div class="bs">
+      <div
+        class="modal fade in"
+        data-bs-backdrop="static"
+        id="thankYouPopUp"
+        tabindex="-1"
+        aria-labelledby="thankYouPopUpLabel"
+        aria-hidden="true"
+      >
+      <div class="modal-dialog relative !container mx-auto modal-dialog-centered">
+    
+        <div class="modal-content py-10 px-5 !border-none thank-you-popup mx-auto bg-transparent">
+          <button class="fixed top-5 right-5" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <img src="assets/images/close-btn.svg" class="">
+          </button>
+            <img src="assets/images/hlopushka.svg" class="mx-auto" alt="">
+            <p class="font-bold text-[24px] text-center leading-10 !text-white mt-5">
+              Thank you!
+            </p>
+            <P
+            class="font-normal text-sm text-trans-white text-center mt-2"
+          >
+          We will send all information about 
+          our updates on your email
+          </p>
+        </div>
+      </div>
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>

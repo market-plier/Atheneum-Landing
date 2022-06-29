@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: ['./dist/*.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -44,16 +45,16 @@ module.exports = {
           '.container': {
             maxWidth: '100%',
             '@screen sm': {
-              maxWidth: '320px',
+              maxWidth: '320px !important',
             },
             '@screen md': {
-              maxWidth: '640px',
+              maxWidth: '640px !important',
             },
             '@screen lg': {
-              maxWidth: '768px',
+              maxWidth: '768px !important',
             },
             '@screen xl': {
-              maxWidth: '1024px',
+              maxWidth: '1024px !important',
             },
           }
         })
