@@ -3,9 +3,10 @@ import "./style.scss";
 
 import { Modal } from 'bootstrap';
 
-// var isFirstShowCall = false;
+var isFirstShowCall = false;
 // window.addEventListener('DOMContentLoaded', (_event) => {
 //     document.querySelector('#thankYouPopUp').addEventListener('show.bs.modal', function (e) {
+//         debugger;
 //         isFirstShowCall = !isFirstShowCall; // Prevents an endless recursive call
 //         if (isFirstShowCall) {
 //             e.preventDefault(); // Prevent immediate opening

@@ -1,23 +1,18 @@
 module.exports = {
   important: true,
   purge: ['./dist/*.html'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
+    container: {
+      padding: '50px',
+    },
     screens: {
-      'sm': '320px',
-      // => @media (min-width: 640px) { ... }
+      'sm': '420px',
 
       'md': '640px',
-      // => @media (min-width: 768px) { ... }
 
-      'lg': '768px',
-      // => @media (min-width: 1024px) { ... }
+      'xl': '1266px',
 
-      'xl': '1024px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      '2xl': '1720px',
     },
     extend: {
       backgroundImage: {
@@ -25,40 +20,13 @@ module.exports = {
         'background': 'radial-gradient(62.81% 133.94% at 17.27% 14.86%, #04127B 0%, #00001C 100%)',
         'green': 'radial-gradient(50% 50% at 50% 50%, rgba(0, 194, 78, 0.15) 0%, rgba(34, 208, 150, 0.15) 100%)',
         'sponsor': 'linear-gradient(258.9deg, rgba(24, 200, 255, 0.3) -6.52%, rgba(147, 63, 254, 0.3) 91.35%)',
+        'orbit': 'url("images/background.svg")',
       },
       colors: {
         'white': '#FFFFFF',
         'trans-white': '#FFFFFFCC',
         'blue': '#5BCEFF',
-
       },
     },
-    variants: {
-      extend: {},
-    },
-    corePlugins: {
-      container: false
-    },
-    plugins: [
-      function ({ addComponents }) {
-        addComponents({
-          '.container': {
-            maxWidth: '100%',
-            '@screen sm': {
-              maxWidth: '320px !important',
-            },
-            '@screen md': {
-              maxWidth: '640px !important',
-            },
-            '@screen lg': {
-              maxWidth: '768px !important',
-            },
-            '@screen xl': {
-              maxWidth: '1024px !important',
-            },
-          }
-        })
-      }
-    ]
   }
 };
