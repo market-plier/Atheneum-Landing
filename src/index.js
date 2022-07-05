@@ -17,7 +17,10 @@ var isFirstShowCall = false;
 //         }
 //     });
 // });
-document.querySelector('#closeBtn').addEventListener('click', function () {
+document.querySelector('#closeBtn').addEventListener('click', closeMenu);
+document.querySelectorAll('nav a').forEach(x => x.addEventListener('click', closeMenu));
+
+function closeMenu(){
     document.querySelector('.burger-menu').classList.add('opacity-0', 'invisible');
     document.querySelector('#wrapper').attributeStyleMap.clear();
-});
+}
