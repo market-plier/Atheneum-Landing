@@ -2,87 +2,497 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Webpack Test</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Tailwind Webpack Test</title>
 </head>
 
 <body class="bg-background">
-  <header class="flex justify-between p-5">
-    <img src="assets/images/mobile/mobile-logo.svg">
-    <img src="assets/images/mobile/mobile-burger.svg">
-    <nav class="hidden">
+   <div id="wrapper" class="xl:bg-orbit bg-contain bg-no-repeat">
+      <header class="flex justify-between p-5 xl:px-24 xl:py-10">
+         <div class="hidden xl:block">
+            <p class="font-normal text-sm text-trans-white text-center xl:text-left">
+               Змінити мову тут
+            </p>
+            <button class="mx-auto mt-2 block">
+               <img src="assets/images/ukraine-language.svg" alt="">
+            </button>
+         </div>
+         <div class="hidden xl:flex xl:min-w-[800px] 2xl:gap-14 items-center justify-around">
+            <a href="#video" class="font-normal min-w-[83px] text-sm 2xl:text-lg text-trans-white text-center hover:text-[#5BCEFF] hover:underline hover:font-bold">
+               About Us
+            </a>
+            <a href="#team" class="font-normal min-w-[83px] text-sm 2xl:text-lg text-trans-white text-center hover:text-[#5BCEFF] hover:underline hover:font-bold">
+               Our Team
+            </a>
+            <img class="mx-5 2xl:w-[177px]" src="assets/images/xl/logo.svg" />
+            <a href="#roadmap" class="font-normal min-w-[83px] text-sm 2xl:text-lg text-trans-white text-center hover:text-[#5BCEFF] hover:underline hover:font-bold">
+               Roadmap
+            </a>
+            <a href="#benefits" class="font-normal min-w-[83px] text-sm 2xl:text-lg text-trans-white text-center hover:text-[#5BCEFF] hover:underline hover:font-bold">
+               Benefits
+            </a>
+         </div>
+         <a href="#contacts" class="hidden xl:block">
+            <img class="2xl:w-[130px]" src="assets/images/contact-us-btn.svg" alt="">
+         </a>
+         <img class="m-0 xl:hidden" src="assets/images/mobile/mobile-logo.svg" />
+         <button class="xl:hidden"
+            onclick="document.querySelectorAll('.burger-menu').forEach(el => el.classList.remove('opacity-0','invisible')); document.querySelectorAll('.burger-menu').forEach(el => el.classList.add('opacity-100')); document.querySelector('#wrapper').style.overflow = 'hidden'">
+            <img src="assets/images/mobile/mobile-burger.svg" />
+         </button>
+         <nav
+            class="opacity-0 invisible p-5 burger-menu flex flex-col justify-between fixed top-0 bottom-0 left-0 right-0 bg-background z-10">
+            <div class="flex justify-between">
+               <img src="assets/images/mobile/mobile-logo.svg" />
+               <button id="closeBtn">
+                  <img src="assets/images/close-btn.svg" class="">
+               </button>
+            </div>
+            <div>
+               <a href="#video" class="font-normal text-lg text-trans-white text-center mt-7 block">
+                  About Us
+               </a>
+               <a href="#team" class="font-normal text-lg text-trans-white text-center mt-7 block">
+                  Our Team
+               </a>
+               <a href="#roadmap" class="font-normal text-lg text-trans-white text-center mt-7 block">
+                  Roadmap
+               </a>
+               <a href="#benefits" class="font-normal text-lg text-trans-white text-center mt-7 block">
+                  Benefits
+               </a>
+            </div>
+            <div class="container mx-auto">
+               <p class="font-normal text-sm text-trans-white text-center">
+                  Змінити мову тут
+               </p>
+               <button class="mx-auto mt-2 block">
+                  <img src="assets/images/ukraine-language.svg" alt="">
+               </button>
+               <div class="devider my-7"></div>
+               <a href="#contacts" class="mx-auto block">
+                  <img src="assets/images/contact-us-btn.svg" alt="">
+               </a>
+            </div>
+         </nav>
+      </header>
+      <main class="container mx-auto mt-11 xl:mt-[124px] 2xl:mt-[252px] xl:px-48 2xl:px-[327px]">
+         <p
+            class="font-bold text-[32px] leading-10 xl:text-[60px] xl:leading-[75px] 2xl:text-[80px] 2xl:leading-[100px] text-white text-center">
+            Monetize your videos with
+            <span class="font-extrabold text-[#5683ff]">NFTs</span> in a couple of
+            clicks
+         </p>
+         <p
+            class="font-normal text-sm xl:text-lg text-trans-white text-center mt-2 xl:mt-5 2xl:mt-7 2xl:text-[24px] 2xl:leading-[36px] leading-5">
+            Atheneum is a platform that lets a YouTuber have a stable income with
+            NFTs without having to dive into the complicated Web 3.0 world
+         </p>
+         <div class="xl:flex xl:px-44 xl:mt-[60px] 2xl:mt-[80px] gap-14 2xl:gap-16 justify-center">
+            <a href="#introduction"
+               class="block text-center glow-btn bg-gradient text-lg text-white w-[100%] xl:w-[200px] font-bold mt-12 xl:mt-0 rounded-[10px] p-[15px]">
+               I want it!
+            </a>
+            <a href="#benefits" class="justify-center items-center mt-7 xl:mt-0 flex text-white discover hover:text-[#5BCEFF] hover:underline">
+               <img class="m-0 w-[14px] xl:w-[16px]" src="assets/images/mobile/mobile-compas.svg" />
+               <p class="ml-[7px] xl:text-[20px] font-bold">Discover more</p>
+            </a>
+         </div>
+         <div class="flex xl:hidden justify-between mt-14">
+            <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
+               <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg" />
+            </div>
+            <div class="flex justify-center triangle w-12 h-12 rounded-full">
+               <img class="w-[30px]" src="assets/images/triangle-crypto.svg" />
+            </div>
+            <div class="flex justify-center tether w-12 h-12 rounded-full">
+               <img class="w-[21px]" src="assets/images/tether.svg" />
+            </div>
+            <div class="flex justify-center nano w-12 h-12 rounded-full">
+               <img class="w-[30px]" src="assets/images/nano.svg" />
+            </div>
+         </div>
+      </main>
+      <section id="introduction" class="container mx-auto mt-24 xl:mt-64 2xl:mt-[414px] xl:flex justify-around">
+         <div class="xl:w-[416px] 2xl:w-[610px]">
+            <img class="xl:w-[100%]" src="assets/images/mobile/mobile-introduction.svg" />
+         </div>
+         <div class="xl:max-w-[50%] 2xl:max-w-[40%]">
+            <p
+               class="font-bold text-[24px] 2xl:text-[50px] 2xl:leading-[65px] xl:text-[32px] xl:leading-[41px] leading-10 text-white mt-12 text-center xl:text-left">
+               Introduction to <span class="font-bold text-blue">Atheneum</span>
+            </p>
+            <p class="font-normal text-sm xl:text-lg text-trans-white text-center mt-5 leading-5 xl:text-left">
+               Atheneum is a marketplace-based platform that lets YouTubers easily sell
+               custom or automatically-generated NFTs related to their videos. At the
+               same time, the fans can simply purchase the NFTs to support the creator
+               or to access additional content.
+            </p>
+            <div class="devider my-5"></div>
+            <p class="xl:text-left font-normal text-sm xl:text-lg text-trans-white text-center mt-2 leading-5">
+               Follow us on social media:
+            </p>
+            <div class="flex justify-around mt-2 xl:justify-start xl:gap-5">
+               <a href="https://www.facebook.com/Atheneum-Official-102690905771777">
+                  <img class="m-0 facebook" src="assets/images/facebook.svg" />
 
-    </nav>
-  </header>
+               </a>
 
-  <main class="container mx-auto mt-11">
-    <p class="font-bold text-[32px] leading-10 text-white text-center">
-      Monetize your videos with <span class="font-extrabold text-[#5683ff]">NFTs</span> in a couple of clicks
-    </p>
-    <p class="font-normal text-sm text-trans-white text-center mt-2 leading-5">
-      Atheneum is a platform that lets a YouTuber have a stable income with NFTs without having to dive into the
-      complicated Web 3.0 world
-    </p>
-    <button class="bg-gradient text-lg text-white font-bold mt-12 rounded-[10px] p-[15px] container">I want it!</button>
-    <a class="justify-center mt-7 flex text-white">
-      <img src="assets/images/mobile/mobile-compas.svg">
-      <p class="ml-[7px] font-bold">Discover more</p>
-    </a>
-    <div class="flex justify-between mt-14">
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
+               <a href="https://twitter.com/Atheneum15">
+                  <img class="m-0 twitter" src="assets/images/twitter.svg" />
+
+               </a>
+
+               <a href="https://www.instagram.com/atheneum.official/">
+                  <img class="m-0 instagram" src="assets/images/instagram.svg" />
+
+               </a>
+
+               <a href="https://www.youtube.com/channel/UCnFW6p6udK3asSWSbnv5vvw">
+                  <img class="m-0 youtube" src="assets/images/youtube.svg" />
+
+               </a>
+               <a href="https://www.linkedin.com/company/atheneumcompany">
+                  <img class="m-0 linkedin" src="assets/images/linkedin.svg" />
+
+               </a>
+               <a href="https://t.me/atheneumplatform">
+                  <img class="m-0 telegram" src="assets/images/telegram.svg" />
+
+               </a>
+
+            </div>
+         </div>
+
+      </section>
+      <section id="monetizing"
+         class="container mx-auto xl:mt-48 2xl:mt-64 xl:flex flex-row-reverse justify-around mt-24">
+         <div class="xl:w-[416px] 2xl:w-[610px]">
+            <img class="xl:w-[100%]" src="assets/images/monetizing.svg" />
+         </div>
+         <div class="xl:max-w-[50%] 2xl:max-w-[40%] xl:flex-col xl:flex xl:justify-center">
+            <p
+               class="font-bold text-[24px] 2xl:text-[50px] 2xl:leading-[65px] xl:text-[32px] xl:leading-[41px] leading-10 text-white mt-12 xl:mt-0 text-center xl:text-left">
+               Monetizing videos with NFTs
+            </p>
+            <p class="font-normal text-sm xl:text-lg text-trans-white text-center xl:text-left mt-5 leading-5">
+               YouTubers often struggle to make income with their content, especially
+               if they get demonetized. Atheneum lets the creators have a consistent
+               revenue based on NFT technology. The platform creates, puts to the
+               marketplace, and sells the NFTs all by itself so a YouTuber does minimum
+               additional efforts.
+            </p>
+            <button
+               class="glow-btn bg-gradient text-lg text-white font-bold mt-5 rounded-[10px] p-[15px] w-[100%] xl:w-[220px] xl:px-[60px] 2xl:mt-10">
+               Learn more
+            </button>
+         </div>
+      </section>
+      <section id="video" class="container mx-auto xl:mt-48 2xl:mt-64 mt-24">
+         <p
+            class="font-bold text-[24px] 2xl:text-[50px] 2xl:leading-[65px] xl:text-[32px] xl:leading-[41px] leading-10 text-white mt-12 text-center">
+            How does Atheneum work?
+         </p>
+         <iframe class="w-full mt-10 xl:mt-14 aspect-video" src="https://www.youtube.com/embed/nzMIaa7qCRg"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+         </iframe>
+      </section>
+      <section id="benefits" class="container mx-auto mt-24 xl:mt-48 2xl:mt-64 xl:flex justify-around">
+         <div class="xl:w-[416px] 2xl:w-[610px]">
+            <img class="xl:w-[100%]" src="assets/images/benefits.svg" />
+         </div>
+         <div class="xl:max-w-[50%] 2xl:max-w-[40%] xl:flex-col xl:flex xl:justify-center">
+            <p
+               class="font-bold text-[24px] 2xl:text-[50px] 2xl:leading-[65px] leading-10 xl:text-[32px] xl:leading-[41px] text-white mt-12 text-center">
+               <span class="font-bold text-blue">Benefits</span> for NFT holders
+            </p>
+            <p class="font-normal text-sm text-trans-white text-center mt-5 leading-5 xl:text-lg xl:text-left">
+               When you buy the NFTs, you not only support your favorite content
+               creators but also gain access to some extras or you can be mentioned as
+               a "Top fan" for this channel. The content that you access after buying
+               the NFTs can be additional videos, books, links for some topics, and so
+               on…
+            </p>
+            <div class="flex mt-5 items-start py-[10px] px-[15px] bg-green green-gradient-box rounded-[10px]">
+               <img class="m-0" src="assets/images/tick.svg" />
+               <p class="green-gradient-text font-bold text-sm xl:text-lg ml-2">
+                  Additional features: videos, books, links for some topics…
+               </p>
+            </div>
+         </div>
+      </section>
+      <section id="roadmap" class="mt-24 xl:mt-48 2xl:mt-64">
+         <div class="container mx-auto">
+            <p class="font-bold  text-[24px] 2xl:text-[50px] 2xl:leading-[65px] leading-10 xl:text-[32px] xl:leading-[41px] text-white mt-12 text-center">
+               Roadmap
+            </p>
+         </div>
+         <div class="w-[100%] pb-4 mt-10 overflow-x-scroll">
+            <img src="assets/images/roadmap.svg" class="max-w-none" />
+         </div>
+         <p class="font-normal text-sm text-blue mt-2 text-center">Drag to move</p>
+      </section>
+      <section id="team" class="container mx-auto mt-24 xl:mt-48 2xl:mt-64">
+         <p
+            class="font-bold text-[24px] 2xl:text-[50px] 2xl:leading-[65px] xl:text-[32px] xl:leading-[42px] leading-10 text-white mt-12 text-center">
+            Our Team
+         </p>
+         <div class="hidden xl:flex justify-around mt-14">
+            <div>
+               <img src="assets/images/artem.svg" class="d-block w-100" alt="..." />
+               <h5 class="font-bold text-2xl text-white mt-[-15px] text-center">
+                  Artem Buchihin
+                  <p class="font-normal mt-1 text-lg text-trans-white text-center">
+                     CTO
+                  </p>
+            </div>
+            <div class="carousel-item">
+               <img src="assets/images/danylo.svg" class="d-block w-100" alt="..." />
+               <h5 class="font-bold text-2xl leading-6 text-white mt-[-15px] text-center">
+                  Danylo Liakhovetskyi
+               </h5>
+               <p class="font-normal mt-1 text-lg text-trans-white text-center">
+                  CEO
+               </p>
+            </div>
+            <div class="carousel-item">
+               <img src="assets/images/ilya-z.svg" class="d-block w-100" alt="..." />
+               <h5 class="font-bold text-2xl leading-6 text-white text-center mt-[-15px]">
+                  Ilya Zubkov
+               </h5>
+               <p class="font-normal mt-1 text-lg text-trans-white text-center">
+                  COO
+               </p>
+            </div>
+            <div class="carousel-item">
+               <img src="assets/images/eric.svg" class="d-block w-100" alt="..." />
+               <h5 class="font-bold text-2xl leading-6 text-white text-center mt-[-15px]">
+                  Erik Poda
+               </h5>
+               <p class="font-normal mt-1 text-lg text-trans-white text-center">
+                  Software engineer
+               </p>
+            </div>
+         </div>
+         <div class="bs xl:hidden">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="false" data-bs-ride="false">
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                     aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                     aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                     aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                     aria-label="Slide 4"></button>
+               </div>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="assets/images/artem.svg" class="d-block w-100" alt="..." />
+                     <div class="carousel-caption redef">
+                        <h5 class="font-bold text-[18px] leading-6 text-white text-center">
+                           Artem Buchihin
+                        </h5>
+                        <p class="font-normal mt-1 text-sm text-trans-white text-center">
+                           CTO
+                        </p>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/images/danylo.svg" class="d-block w-100" alt="..." />
+                     <div class="carousel-caption redef">
+                        <h5 class="font-bold text-[18px] leading-6 text-white text-center">
+                           Danylo Liakhovetskyi
+                        </h5>
+                        <p class="font-normal mt-1 text-sm text-trans-white text-center">
+                           CEO
+                        </p>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/images/ilya-z.svg" class="d-block w-100" alt="..." />
+                     <div class="carousel-caption redef">
+                        <h5 class="font-bold text-[18px] leading-6 text-white text-center">
+                           Ilya Zubkov
+                        </h5>
+                        <p class="font-normal mt-1 text-sm text-trans-white text-center">
+                           COO
+                        </p>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <img src="assets/images/eric.svg" class="d-block w-100" alt="..." />
+                     <div class="carousel-caption redef">
+                        <h5 class="font-bold text-[18px] leading-6 text-white text-center">
+                           Erik Poda
+                        </h5>
+                        <p class="font-normal mt-1 text-sm text-trans-white text-center">
+                           Software engineer
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+               </button>
+            </div>
+         </div>
+      </section>
+      <section id="mentor" class="container mx-auto mt-24 xl:mt-48 2xl:mt-64">
+         <p class="font-bold text-[24px] xl:text-[32px] xl:leading-[42px] leading-10 text-white mt-12 text-center">
+            Our Mentor
+         </p>
+         <img class="mx-auto mt-10 xl:mt-14" src="assets/images/mentor.svg" />
+         <h5 class="font-bold text-[18px] xl:text-[24px] leading-6 text-white text-center">
+            Vadim T. Rogovskiy
+         </h5>
+         <p class="font-normal text-sm xl:text-lg text-trans-white text-center">
+            Founder of Online Startup School
+         </p>
+      </section>
+      <section id="sponsor" class="bg-sponsor py-7 mt-24 xl:mt-60 2xl:mt-64">
+         <div class="container mx-auto xl:flex justify-between">
+            <div>
+               <h5 class="font-bold text-[18px] xl:text-2xl xl:text-left leading-6 text-white text-center">
+                  Sponsored by:
+               </h5>
+               <p class="font-normal mt-1 text-sm xl:text-lg text-trans-white text-center">
+                  Companies that fund Atheneum
+               </p>
+            </div>
+            <div class="flex mt-5 xl:m-0 items-center justify-center">
+               <img class="xl:w-[120px]" src="assets/images/yep-logo.svg" alt="" />
+               <div class="vertical-devider xl:h-10 mx-[10px]"></div>
+               <img class="xl:w-[250px]" src="assets/images/cid-logo.svg" alt="" />
+            </div>
+            <div class="relative xl:w-[250px] hidden xl:block">
+               <img class="absolute bottom-0" src="assets/images/sponsor.svg" alt="">
+            </div>
+         </div>
+      </section>
+      <section id="form" class="container mt-24 xl:mt-48 2xl:mt-64 mx-auto">
+         <div class="contact-form p-5 xl:px-24 py-20  xl:flex justify-between">
+            <div class="xl:w-[416px] 2xl:w-[610px]">
+               <img class="xl:w-[100%]" src="assets/images/form-pic.svg" class="mx-auto" alt="" />
+            </div>
+            <form class="xl:max-w-[363px] 2xl:max-w-[553px] xl:flex-col xl:flex xl:justify-center grow">
+               <p class="font-bold text-center xl:text-[32px] xl:leading-[42px] leading-10 text-white mt-5">
+                  Keep in touch
+               </p>
+               <input type="text" placeholder="Name" class="custom-input p-5 w-full mt-3" />
+               <input type="text" placeholder="Email" class="custom-input p-5 w-full mt-3" />
+               <input type="text" placeholder="Comment" class="custom-input p-5 pb-24 w-full mt-3" />
+               <button type="button"
+                  class="bg-gradient text-lg text-white font-bold mt-7 rounded-[10px] p-[15px] container"
+                  data-bs-toggle="modal" data-bs-target="#thankYouPopUp">
+                  Send my comment
+               </button>
+            </form>
+         </div>
+      </section>
+      <footer id="contacts" class="container mx-auto mt-24 pb-10">
+         <div class="xl:flex justify-between items-center">
+            <div class="w-[255px] mx-auto xl:m-0">
+               <img src="assets/images/mobile/mobile-logo.svg" class="xl:m-0 xl:w-[160px]" />
+            </div>
+            <div class="xl:flex gap-10">
+               <a href="#video" class="font-normal text-sm text-trans-white text-center mt-7 xl:mt-0 block">
+                  About Us
+               </a>
+               <a href="#team" class="font-normal text-sm text-trans-white text-center mt-7 xl:mt-0 block">
+                  Our Team
+               </a>
+               <a href="#roadmap" class="font-normal text-sm text-trans-white text-center mt-7 xl:mt-0 block">
+                  Roadmap
+               </a>
+               <a href="#benefits" class="font-normal text-sm text-trans-white text-center mt-7 xl:mt-0 block">
+                  Benefits
+               </a>
+            </div>
+
+            <div>
+               <p class="font-normal text-sm text-trans-white text-center mt-10 xl:mt-0 xl:text-right block">
+                  Keep in touch with us!
+               </p>
+               <a href="mailto" class="font-bold text-lg text-blue block mt-2 text-center xl:text-right">
+                  atheneum.official@gmail.com
+               </a>
+            </div>
+         </div>
+         <div class="devider my-16 hidden xl:block"></div>
+         <div class="xl:flex justify-between items-center">
+            <div class="flex order-3 xl:gap-5 justify-around mt-7">
+               <a href="https://www.facebook.com/Atheneum-Official-102690905771777">
+                  <img class="m-0 facebook" src="assets/images/facebook.svg" />
+
+               </a>
+
+               <a href="https://twitter.com/Atheneum15">
+                  <img class="m-0 twitter" src="assets/images/twitter.svg" />
+
+               </a>
+
+               <a href="https://www.instagram.com/atheneum.official/">
+                  <img class="m-0 instagram" src="assets/images/instagram.svg" />
+
+               </a>
+
+               <a href="https://www.youtube.com/channel/UCnFW6p6udK3asSWSbnv5vvw">
+                  <img class="m-0 youtube" src="assets/images/youtube.svg" />
+
+               </a>
+               <a href="https://www.linkedin.com/company/atheneumcompany">
+                  <img class="m-0 linkedin" src="assets/images/linkedin.svg" />
+
+               </a>
+               <a href="https://t.me/atheneumplatform">
+                  <img class="m-0 telegram" src="assets/images/telegram.svg" />
+
+               </a>
+            </div>
+            <div class="devider my-10 xl:hidden"></div>
+            <p class="font-normal order-1 text-sm text-trans-white text-center">
+               © Atheneum,2022. All rights reserved
+            </p>
+            <a href="mailto" class="font-normal order-2 text-sm text-trans-white text-center mt-2 underline block">
+               Privacy Policy
+            </a>
+         </div>
+      </footer>
+      <div class="bs">
+         <div class="modal fade in" data-bs-backdrop="static" id="thankYouPopUp" tabindex="-1"
+            aria-labelledby="thankYouPopUpLabel" aria-hidden="true">
+            <div class="modal-dialog relative !container xl:max-w-[700px] mx-auto modal-dialog-centered">
+               <div
+                  class="modal-content py-10 px-5 xl:py-14 xl:px-24 !border-none thank-you-popup mx-auto bg-transparent">
+                  <button class="fixed top-5 right-5 xl:top-14 xl:right-14" type="button" data-bs-dismiss="modal"
+                     aria-label="Close">
+                     <img src="assets/images/close-btn.svg" class="xl:w-5">
+                  </button>
+                  <img src="assets/images/hlopushka.svg" class="mx-auto xl:w-[100px]" alt="">
+                  <p
+                     class="font-bold text-[24px] 2xl:text-[50px] 2xl:leading-[65px] xl:text-[32px] xl:leading-[42px] text-center leading-10 !text-white !mt-5 xl:mt-7">
+                     Thank you!
+                  </p>
+                  <P class="font-normal text-sm xl:text-lg text-trans-white text-center mt-2">
+                     We will send all information about
+                     our updates on your email
+                  </p>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
-      </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
-      </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
-      </div>
-      <div class="flex justify-center bitcoin w-12 h-12 rounded-full">
-        <img class="w-[17px]" src="assets/images/mobile/bitcoin.svg">
-      </div>
-
-    </div>
-  </main>
-  <section id="introduction" class="container mx-auto mt-24">
-    <img src="/assets/images/mobile/mobile-introduction.svg">
-    <p class="font-bold text-[24px] leading-10 text-white mt-12 text-center">
-      Introduction to <span class="font-bold text-blue">Atheneum</span>
-    </p>
-    <p class="font-normal text-sm text-trans-white text-center mt-5 leading-5">
-      Atheneum is a marketplace-based platform that lets YouTubers easily sell custom or automatically-generated NFTs
-      related to their videos. At the same time, the fans can simply purchase the NFTs to support the creator or to
-      access additional content.
-    </p>
-    <div class="devider my-5"></div>
-    <p class="font-normal text-sm text-trans-white text-center mt-2 leading-5">
-      Follow us on social media:
-    </p>
-    <div class="flex justify-around mt-2">
-      <img src="assets/images/facebook.svg">
-      <img src="assets/images/twitter.svg">
-      <img src="assets/images/instagram.svg">
-      <img src="assets/images/youtube.svg">
-      <img src="assets/images/linkedin.svg">
-      <img src="assets/images/telegram.svg">
-
-    </div>
-  </section>
-  <section>
-
-  </section>
-  <section>
-
-  </section>
-  <footer>
-
-  </footer>
-  <h1 class="">Hello world new</h1>
-  <script src="bundle.js"></script>
+      <script src="bundle.js"></script>
 </body>
 
 </html>
